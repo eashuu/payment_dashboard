@@ -88,6 +88,18 @@ function App() {
           </div>
 
           <div className="bg-white shadow overflow-hidden rounded-lg">
+            <div className="px-6 py-4 border-b border-gray-200">
+              <div className="flex justify-between items-center">
+                <div className="text-sm text-gray-600">
+                  Total Records: <span className="font-semibold">{participants.length}</span>
+                </div>
+                {searchTerm && (
+                  <div className="text-sm text-gray-600">
+                    Filtered Records: <span className="font-semibold">{filteredParticipants.length}</span>
+                  </div>
+                )}
+              </div>
+            </div>
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
